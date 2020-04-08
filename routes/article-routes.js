@@ -1,7 +1,6 @@
 const router = require('express').Router();
-const articleControllers = require('../controllers/article');
+const articleControllers = require('../controllers/article-controllers');
 
-router.use(authentication);
 router.post('/', articleControllers.create);
 router.get('/', articleControllers.findAll);
 router.get('/:projectId', articleControllers.findOne);

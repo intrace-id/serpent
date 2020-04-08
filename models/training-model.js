@@ -34,6 +34,7 @@ const trainingSchema = new Schema({
         ref: 'Tag'
     }],
     price: {
+        type: Number,
         required: true
     },
     hostId: {

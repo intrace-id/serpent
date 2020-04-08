@@ -8,7 +8,7 @@ const articleSchema = new Schema({
     userId: {
         type: ObjectId,
         required: true,
-        ref: User
+        ref: 'User'
     },
     content: {
         type: String,

@@ -1,7 +1,6 @@
 const router = require('express').Router();
-const trainingControllers = require('../controllers/training');
+const trainingControllers = require('../controllers/training-controllers');
 
-router.use(authentication);
 router.post('/', trainingControllers.create);
 router.get('/', trainingControllers.findAll);
 router.get('/:projectId', trainingControllers.findOne);
