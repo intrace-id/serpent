@@ -4,8 +4,8 @@ const Training = require('../models/training-model');
 class TrainingController {
     static create(req, res, next) {
         const { organizationId, name, about, market, target, content, tags, price, host, schedule, certificate, discipline, level } = req.body;
-
-        Training.create({  organizationId, name, about, market, target, content, tags, price, host, schedule, certificate, discipline, level })
+        
+        Training.create({ organizationId, name, about, market, target, content, tags, price, host, schedule, certificate, discipline, level })
         .then( data => {
             res.status(201).json(data)
         })
@@ -13,7 +13,8 @@ class TrainingController {
     }
     
     static findAll(req, res, next) {
-        Training.find().populate(['organizationId','tags', 'hostId'])
+        Training.find()
+        // .populate(['organizationId','tags', 'hostId'])
         .then( data => {
             res.status(200).json(data)
         })
