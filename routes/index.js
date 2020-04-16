@@ -13,4 +13,12 @@ router.use('/tags', tagRoutes);
 router.use('/trainings', trainingRoutes);
 router.use('/users', userRoutes);
 
+router.get('/', function (req, res) {
+    res.send('GET request to the Intrace API')
+})
+  
+router.post('/', function (req, res) {
+    res.send('POST request to the Intrace API')
+})
+
 module.exports = router;
