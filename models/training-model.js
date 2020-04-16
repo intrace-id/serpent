@@ -3,48 +3,48 @@ const { Schema, model, ObjectId } = require('mongoose');
 const trainingSchema = new Schema({
     organizationId: {
         type: ObjectId,
-        // required: true,
+        required: true,
         ref: 'Organization'
     },
     name: {
         type: String,
-        // required: true
+        required: true
     },
     about: {
         type: String,
-        // required: true
+        required: true
     },
     market: {
         type: String,
-        // required: true
+        required: true
     },
     target: {
         type: String,
-        // required: true
+        required: true
     },
     content: {
         type: Array,
-        // required: true,
+        required: true,
         minlength: 1
     },
     tags: [{
         type: [ObjectId],
-        // required: true,
+        required: true,
         minlength: 1,
         ref: 'Tag'
     }],
     price: {
         type: Number,
-        // required: true
+        required: true
     },
     hostId: {
         type: ObjectId,
         ref: 'Organization',
-        // required: true
+        required: true
     },
     schedule: {
         type: String,
-        // required: true
+        required: true
     },
     certificate: {
         type: String

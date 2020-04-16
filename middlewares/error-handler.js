@@ -1,7 +1,12 @@
 
 function errorHandler (err, req, res, next) {
-    res.status(err.code).json(err.message);
-    break;
+    let errCode;
+    let errMsg;
+
+    err.message ? errMsg = err.message : errMsg = err;
+    err.code.length === 3 ? errCode = err.code : errCode = 500;
+
+    res.status(errCode).json(errMsg)
 };
 
 module.exports = errorHandler;
