@@ -11,7 +11,7 @@ const routes = require('./routes');
 const errorHandler = require('./middlewares/error-handler');
 
 // Check mongoose connection
-mongoose.connect(`mongoose.connect('mongodb://127.0.0.1/intrace`, {
+mongoose.connect(process.env.MONGO_CONNECT, {
     useNewUrlParser: true,
     useCreateIndex: true,
     useFindAndModify: false,
